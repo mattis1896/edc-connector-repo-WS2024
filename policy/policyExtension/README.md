@@ -27,12 +27,12 @@ Ensure you are in the **root directory of the project** before running the follo
 
 #### Start the Provider
 ```bash
-"C:\Program Files\Java\jdk-17\bin\java.exe" -Dedc.fs.config=policy/policyExtension/policy-enforcement-provider/config.properties -jar policy/policyExtension/policy-enforcement-provider/build/libs/provider.jar
+java -Dedc.fs.config=policy/policyExtension/policy-enforcement-provider/config.properties -jar policy/policyExtension/policy-enforcement-provider/build/libs/provider.jar
 ```
 
 #### Start the Consumer
 ```bash
-"C:\Program Files\Java\jdk-17\bin\java.exe" -Dedc.fs.config=policy/policyExtension/policy-enforcement-consumer/config.properties -jar policy/policyExtension/policy-enforcement-consumer/build/libs/consumer.jar
+java -Dedc.fs.config=policy/policyExtension/policy-enforcement-consumer/config.properties -jar policy/policyExtension/policy-enforcement-consumer/build/libs/consumer.jar
 ```
 
 ---
