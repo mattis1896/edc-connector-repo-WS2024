@@ -26,7 +26,7 @@ To build the project, first ensure you have Gradle installed on your system. You
 Once the project is successfully built, you can run the connector using the `java -jar` command. The following command will execute the JAR file created in the build step:
 
 ```bash
-java -jar basic/basic-03-configuration/build/libs/StatusApi-connector.jar
+java -jar ApiExtension/StatusApiExtension/build/libs/StatusApi-connector.jar
 ```
 
 #### Explanation:
@@ -41,7 +41,7 @@ Once the connector is running, you can send a GET request to the `/status` endpo
 #### Example Request:
 
 ```bash
-curl -X GET http://localhost:8080/status
+curl -X GET http://localhost:8181/api/status
 ```
 
 #### Example Response:
@@ -53,27 +53,5 @@ curl -X GET http://localhost:8080/status
 ```
 
 This response indicates that the connector is up and running.
-
-## Summary of Commands
-
-1. **Ensure you are in the root directory** of the project (where `settings.gradle` and `build.gradle` are located).
-
-2. **Build the project** (clean + build):
-
-   ```bash
-   ./gradlew clean ApiExtension:StatusApiExtension:build
-   ```
-
-3. **Run the connector**:
-
-   ```bash
-   java -jar basic/basic-03-configuration/build/libs/StatusApi-connector.jar
-   ```
-
-4. **Check the status of the connector** (using `curl` or any HTTP client):
-
-   ```bash
-   curl -X GET http://localhost:8080/status
-   ```
 
 ---

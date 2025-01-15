@@ -1,4 +1,4 @@
-rootProject.name = "edc-connectors"
+rootProject.name = "edc-connector-repo"
 
 pluginManagement {
     repositories {
