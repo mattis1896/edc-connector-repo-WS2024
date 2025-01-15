@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+        "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<!--
+    This configuration file is used by Checkstyle, a static code analysis tool
+    designed to ensure that source code adheres to a set of coding standards.
+
+    It helps to identify potential code quality issues, maintain consistency
+    across a codebase, and improve overall code readability and maintainability.
+
+    You can customize this file by adding or removing rules according to
+    your project's requirements.
+-->
+
+<module name="Checker">
+         <!-- Define your specific coding rules and checks here. -->
+</module>
