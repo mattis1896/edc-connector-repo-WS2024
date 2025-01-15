@@ -1,75 +1,51 @@
-# EDC Samples
+# Testing the implementation of EDC Connectors
 
-This repository provides samples for the Eclipse Dataspace Components (EDC) project, that aim to support the
-onboarding process for new community members. The samples are sorted by scope for easy navigation and serve as a
-step-by-step guide for getting familiar with the project. The code and a detailed documentation for each sample reside
-in the respective module.
+In this project, we test different aspects of the EDC Connectors implementation.
+
+## Current Folders
+
+### ApiExtension
+
+How to extend the EDC API with custom endpoints.
+
+### Policy
+
+How to control the flow between Connectors using  simple Policies.
+
+### Transfer
+
+How to transfer data between Connectors. Example with Consumer Pulling data from Provider.
+
+## Gradle Multi-Project
+
+This repository is set up as a Gradle multi-project build. This means that the different components of the EDC Connectors, such as ApiExtension, Policy, and Transfer, are organized as subprojects under one main Gradle build script. This structure allows for easy management and isolation of different aspects of the project, while still being able to build, test, and deploy them together as a unified system.
+
+With the Gradle multi-project setup, each subproject has its own configuration, dependencies, and build tasks, but can also share common dependencies and tasks from the root project.
+
+Hier ist der Abschnitt "Prerequisites", den du hinzufügen kannst:
+
+---
 
 ## Prerequisites
 
-The samples assume a working knowledge of the **EDC nomenclature**. If you do not know about the EDC nomenclature we
-strongly advise reading the [documentation](https://eclipse-edc.github.io/docs/#/) and/or watching the
-[introductory videos](https://www.youtube.com/@eclipsedataspaceconnector9622/featured).
+Before starting with this project, make sure you have the following prerequisites installed:
 
-Also, a working knowledge of **Git**, **Gradle**, **Java** and **HTTP** is presumed.
+### 1. **Java Development Kit (JDK)**
 
-We'll assume that you've just checked out the samples code base and have **Java 17+** installed on your development
-machine. If not, please download and install JDK 17+ for your OS.
+This project requires Java JDK 17 or later to build and run. You can download the latest version of the JDK from the [official Oracle website](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html) or use OpenJDK.
 
-Command examples in this document will use the `bash` syntax and use Unix-style paths, but any other shell should be
-fine as well. If you're using Windows you either need to adapt the paths or use WSL2.
+### 2. **Gradle**
 
-## Scopes
+Gradle is used for building and managing the dependencies of this project. To build the project, you need Gradle installed. You can install Gradle by following the [official Gradle installation guide](https://gradle.org/install/).
 
-The samples are separated by scope, where each scope has a different focus. Depending on what you want to learn more
-about, you can choose the scope to look at. More scopes may be added in the future, so be sure to check back regularly.
+### 3. **Git**
 
-> **If you are new to the project, it is advisable to start with the `basic` scope. The samples in this scope teach the
-> very basics about using the EDC framework, which are presupposed in all other scopes!**
+Git is required to clone this repository and manage the versioning of your code. You can download Git from the [official website](https://git-scm.com/).
 
-### [StatusApiExtension](./StatusApiExtension/README.md)
+### 4. **Docker (Optional, for Containerization)**
 
-The samples in this scope teach you how to get started with the EDC framework. You will e.g. learn how to set up and run
-a connector and how to create your own extensions. What you learn here will be used in all other samples. Click the
-link above to learn about the basic samples in more detail.
+If you want to test the Connectors in a containerized environment, you need to have Docker installed. Follow the instructions on the [Docker website](https://www.docker.com/get-started) to install Docker on your system. You will likely need this when testing the Connectors in a production-like / cloud environment.
 
-All basic samples are located in the `basic` directory.
+---
 
-### [Transfer](./transfer/README.md)
-
-This scope revolves around the topic of data transfer. In these samples you will learn how a data transfer works in the
-EDC and run different transfer scenarios. Click the link above to learn about the transfer samples in more detail.
-
-All transfer samples are located in the `transfer` directory.
-
-### [Advanced](./advanced/README.md)
-
-Collection of advanced topics regarding the EDC framework.
-Click the link above to learn about the transfer samples in more detail.
-
-All transfer samples are located in the `advanced` directory.
-
-### [Policy](./policy/README.md)
-
-These samples deal with the topic of policies and their evaluation and enforcement. They will teach you what
-configurations you need to make to enable the evaluation of specific policy rules and constraint and how to provide
-custom code for their enforcement.
-
-All policy samples are located in the `policy` directory.
-
-### [Federated Catalog](./federated-catalog/README.md)
-
-These samples focus on the implementation of federated catalogs, covering scenarios such as deploying it as 
-a standalone runtime or as part of a connector. This also includes demonstration of how to implement a target 
-node resolver, which resolves the participant connectors in the dataspace and crawls these connectors to compile 
-a set of all offered catalogs.
-
-All federated catalog samples are located in the [`federated-catalog`](./federated-catalog/README.md) directory.
-
-## Contributing
-
-See [how to contribute](https://github.com/eclipse-edc/docs/blob/main/CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the Apache License 2.0 - see [here](LICENSE) for details.
+If you have got all the prerequisites installed, you are ready to start building, running, and testing the EDC Connectors. Each project folder contains its own README file with specific instructions on how to work with that particular component.
