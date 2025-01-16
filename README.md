@@ -49,15 +49,20 @@ Git is required to clone this repository and manage the versioning of your code.
 ```bash
 docker build -t <username/name> .
 ```
-   or pull it from docker desktop:
+
+   or pull it from docker desktop
+
 ´´´bash
 docker pull mattis96/edc-connector
 ´´´
+
 2. Execute the following command in a terminal in VS-Code:
+
 ´´´bash
 docker run -it --name java-gradle-dev -w /workspace mattis96/edc-connector
 ´´´
-3. Now press F1 and select "Dev Containers: Attach to running conatiner" and then select the correct container.
+
+4. Now press F1 and select "Dev Containers: Attach to running conatiner" and then select the correct container.
 ---
 
 If you have got all the prerequisites installed, you are ready to start building, running, and testing the EDC Connectors. Each project folder contains its own README file with specific instructions on how to work with that particular component.
