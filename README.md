@@ -45,9 +45,10 @@ Git is required to clone this repository and manage the versioning of your code.
 ### 4. **Docker (Optional, for Containerization)**
 
 1. You need the following image. You can either build it yourself with the following command (username/name has to be chosen individually):
-´´´bash
+
+```bash
 docker build -t <username/name> .
-´´´
+```
    or pull it from docker desktop:
 ´´´bash
 docker pull mattis96/edc-connector
