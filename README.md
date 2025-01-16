@@ -52,15 +52,15 @@ docker build -t <username/name> .
 
    or pull it from docker desktop
 
-´´´bash
+```bash
 docker pull mattis96/edc-connector
-´´´
+```
 
 2. Execute the following command in a terminal in VS-Code:
 
-´´´bash
+```bash
 docker run -it --name java-gradle-dev -w /workspace mattis96/edc-connector
-´´´
+```
 
 4. Now press F1 and select "Dev Containers: Attach to running conatiner" and then select the correct container.
 ---
