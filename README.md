@@ -56,7 +56,7 @@ docker build -t <username/name> .
 docker pull mattis96/edc-connector
 ```
 
-2. Execute the following command in a terminal in VS-Code:
+2. Execute the following command in VS-Code in the terminal in your workspace:
 
 ```bash
 docker run -it --name java-gradle-dev -w /workspace mattis96/edc-connector
