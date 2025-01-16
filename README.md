@@ -44,8 +44,19 @@ Git is required to clone this repository and manage the versioning of your code.
 
 ### 4. **Docker (Optional, for Containerization)**
 
-If you want to test the Connectors in a containerized environment, you need to have Docker installed. Follow the instructions on the [Docker website](https://www.docker.com/get-started) to install Docker on your system. You will likely need this when testing the Connectors in a production-like / cloud environment.
-
+1. You need the following image. You can either build it yourself with the following command (username/name has to be chosen individually):
+´´´bash
+docker build -t <username/name> .
+´´´
+   or pull it from docker desktop:
+´´´bash
+docker pull mattis96/edc-connector
+´´´
+2. Execute the following command in a terminal in VS-Code:
+´´´bash
+docker run -it --name java-gradle-dev -w /workspace mattis96/edc-connector
+´´´
+3. Now press F1 and select "Dev Containers: Attach to running conatiner" and then select the correct container.
 ---
 
 If you have got all the prerequisites installed, you are ready to start building, running, and testing the EDC Connectors. Each project folder contains its own README file with specific instructions on how to work with that particular component.
