@@ -62,7 +62,7 @@ docker pull mattis96/edc-connector
 docker run -it --name java-gradle-dev -w /workspace mattis96/edc-connector
 ```
 
-4. Now press F1 and select "Dev Containers: Attach to running conatiner" and then select the correct container.
+4. Now press F1 in VS-Code and select "Dev Containers: Attach to running conatiner". Now you have to select the started container.
 ---
 
 If you have got all the prerequisites installed, you are ready to start building, running, and testing the EDC Connectors. Each project folder contains its own README file with specific instructions on how to work with that particular component.
