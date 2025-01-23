@@ -106,7 +106,7 @@ curl http://localhost:29193/management/v3/edrs/<transfer process id>/dataaddress
 ```
 
 Once this json is read, use a tool like postman or curl to execute the following query, to read the
-data
+data. Insert he authorization value from the last response.
 
 ```bash
 curl --location --request GET 'http://localhost:19291/public/' --header 'Authorization: <edr authorization attribute>'
@@ -119,7 +119,7 @@ is the same as the one you can get at https://jsonplaceholder.typicode.com/users
 Since we configured the `HttpData` with `proxyPath`, we could also ask for a specific user with:
 
 ```bash
-curl --location --request GET 'http://localhost:19291/public/1' --header 'Authorization: <auth code>'
+curl --location --request GET 'http://localhost:19291/public/1' --header 'Authorization: <edr authorization attribute>'
 ```
 
 And the data returned will be the same as in https://jsonplaceholder.typicode.com/users/1
