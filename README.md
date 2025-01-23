@@ -42,27 +42,49 @@ Gradle is used for building and managing the dependencies of this project. To bu
 
 Git is required to clone this repository and manage the versioning of your code. You can download Git from the [official website](https://git-scm.com/).
 
+Certainly, here's the improved version with the first command included and a clearer description of the two options:
+
 ### 4. **Docker (Optional, for Containerization)**
 
-1. You need the following image. You can either build it yourself with the following command (username/name has to be chosen individually) by using the dockerfile from this repository:
+1. **Build or Pull Docker Image**
 
-```bash
-docker build -t <username/name> .
-```
+   You have two options to obtain the necessary Docker image:
 
-   or pull it from docker desktop
+   * **Build from Dockerfile:**
+      ```bash
+      docker build -t <username/name> . 
+      ```
+      This command builds a Docker image using the `Dockerfile` located in the current directory. Replace `<username/name>` with a unique identifier for your image (e.g., `your_username/edc-connector`).
 
-```bash
-docker pull mattis96/edc-connector
-```
+   * **Pull from Docker Hub:**
+      ```bash
+      docker pull mattis96/edc-connector
+      ```
+      This command downloads a pre-built image named `mattis96/edc-connector` from Docker Hub.
 
-2. Execute the following command in VS-Code in the terminal in your workspace:
+2. **Run the Docker Container**
 
-```bash
-docker run -it --name java-gradle-dev -w /workspace mattis96/edc-connector
-```
+   Execute the following command to start the Docker container:
 
-4. Now press F1 in VS-Code and select "Dev Containers: Attach to running conatiner". Now you have to select the started container.
+   ```bash
+   docker run -p 8080:19193 -p 8081:29193 -it --name java-gradle-dev -w /workspace mattis96/edc-connector
+   ```
+
+   This command:
+      * `-p 8080:19193`: Maps port 8080 on the host machine to port 19193 inside the container.
+      * `-p 8081:29193`: Maps port 8081 on the host machine to port 29193 inside the container.
+      * `-it`: Runs the container in interactive mode with a pseudo-TTY.
+      * `--name java-gradle-dev`: Assigns a name to the container for easier identification and management.
+      * `-w /workspace`: Sets the working directory within the container to `/workspace`.
+      * `mattis96/edc-connector`: Specifies the name of the Docker image to use (either the one you built or pulled from Docker Hub).
+
+3. **Attach VS Code**
+
+   * Press F1 in VS Code and select "Dev Containers: Attach to running container".
+   * Select the `java-gradle-dev` container from the list.
+
+This refined description provides a clearer explanation of the two options for obtaining the Docker image and includes the necessary command to run the container with the specified port mappings.
+
 ---
 
 If you have got all the prerequisites installed, you are ready to start building, running, and testing the EDC Connectors. Each project folder contains its own README file with specific instructions on how to work with that particular component.
