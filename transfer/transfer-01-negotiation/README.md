@@ -10,7 +10,7 @@ You will:
 
 * Create an asset on the provider (the asset will be the data to be shared)
 * Create an access policy on the provider (the policy will define the access right to the data)
-* Create a contract definition on the provider
+* Create a contract definition on the provider 
 
 At this step, the consumer should be able to fetch the catalog from the provider and to see the
 contract offer generated from the resources that have been created.
