@@ -83,7 +83,6 @@ Certainly, here's the improved version with the first command included and a cle
    * Press F1 in VS Code and select "Dev Containers: Attach to running container".
    * Select the `java-gradle-dev` container from the list.
 
-This refined description provides a clearer explanation of the two options for obtaining the Docker image and includes the necessary command to run the container with the specified port mappings.
 
 ---
 
