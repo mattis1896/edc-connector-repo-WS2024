@@ -67,7 +67,7 @@ Certainly, here's the improved version with the first command included and a cle
    Execute the following command to start the Docker container:
 
    ```bash
-   docker run -p 8080:19193 -p 8081:29193 -it --name java-gradle-dev -w /workspace mattis96/edc-connector
+   docker run -p 8080:19193 -p 8081:29193 -p 8082:19291 -it --name java-gradle-dev -w /workspace mattis96/edc-connector
    ```
 
    This command:
