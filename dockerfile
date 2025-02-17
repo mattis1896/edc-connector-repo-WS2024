@@ -1,5 +1,5 @@
 # Use an official OpenJDK 17 image as a base image
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-jammy
  
 # Set environment variables for Gradle
 ENV GRADLE_VERSION=7.6 \
