@@ -100,7 +100,7 @@ Sample output:
 
 In order to request any data, the consumer must fetch the catalog from the provider, which contains
 all the contract offers available for negotiation. In our case, it will contain a single contract
-offer, the so-called "catalog". To get the catalog from the consumer side, you can use the following
+offer, the so-called "catalog". To get the catalog from the provider side, you can use the following
 request:
 
 ```bash
