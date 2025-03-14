@@ -1,0 +1,17 @@
+{
+    "@context": {
+        "@vocab": "https://w3id.org/edc/v0.0.1/ns/"
+    },
+    "@id": "resistance_value",
+    "properties": {
+        "name": "PT1000 value",
+        "contenttype": "application/json",
+        "description": "This file contains resistance values"
+    },
+    "dataAddress": {
+      "type": "HttpData",
+      "name": "sensor data pt1000",
+      "baseUrl": "http://localhost:5000/resistanceValue_data",
+      "proxyPath": "true"
+    }
+}

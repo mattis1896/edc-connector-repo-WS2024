@@ -5,8 +5,8 @@
   "@type": "TransferRequestDto",
   "connectorId": "provider",
   "counterPartyAddress": "http://localhost:19194/protocol",
-  "contractId": "0cccdb31-d278-4282-821e-a7cc6c24ee71",
-  "assetId": "assetId",
+  "contractId": "7890b101-52b3-4663-be77-3e0646f0277d",
+  "assetId": "resistance_value",
   "protocol": "dataspace-protocol-http",
   "transferType": "HttpData-PULL"
 }

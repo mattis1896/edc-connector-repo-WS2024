@@ -1,0 +1,17 @@
+{
+    "@context": {
+        "@vocab": "https://w3id.org/edc/v0.0.1/ns/"
+    },
+    "@id": "temperature",
+    "properties": {
+        "name": "temperature",
+        "contenttype": "application/json",
+        "description": "This file contains the temperature values"
+    },
+    "dataAddress": {
+      "type": "HttpData",
+      "name": "sensor data temperature",
+      "baseUrl": "http://localhost:5000/temperature_data",
+      "proxyPath": "true"
+    }
+}

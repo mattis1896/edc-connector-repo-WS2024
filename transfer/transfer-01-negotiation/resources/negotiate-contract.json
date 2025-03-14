@@ -7,9 +7,9 @@
   "protocol": "dataspace-protocol-http",
   "policy": {
     "@context": "http://www.w3.org/ns/odrl.jsonld",
-    "@id": "MQ==:YXNzZXRJZA==:YTNiZjZiNDUtY2JjYy00OWE3LTk4NDItNWI3MTNhODk5Yjhj",
+    "@id": "MQ==:cmVzaXN0YW5jZV92YWx1ZQ==:ZTI0NzNiZGQtOGFhOC00MGJjLWI0NjktNDZmYmY1YjM0NmQz",
     "@type": "Offer",
     "assigner": "provider",
-    "target": "assetId"
+    "target": "resistance_value"
   }
 }

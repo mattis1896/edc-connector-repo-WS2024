@@ -1,0 +1,17 @@
+{
+    "@context": {
+        "@vocab": "https://w3id.org/edc/v0.0.1/ns/"
+    },
+    "@id": "IO_signal",
+    "properties": {
+        "name": "IO-signal",
+        "contenttype": "application/json",
+        "description": "This file contains the current values"
+    },
+    "dataAddress": {
+      "type": "HttpData",
+      "name": "sensor data IO-signal",
+      "baseUrl": "http://localhost:5000/IO_data",
+      "proxyPath": "true"
+    }
+}
