@@ -7,7 +7,7 @@
   "protocol": "dataspace-protocol-http",
   "policy": {
     "@context": "http://www.w3.org/ns/odrl.jsonld",
-    "@id": "MQ==:cmVzaXN0YW5jZV92YWx1ZQ==:ZTI0NzNiZGQtOGFhOC00MGJjLWI0NjktNDZmYmY1YjM0NmQz",
+    "@id": "MQ==:cmVzaXN0YW5jZV92YWx1ZQ==:YWYwMzE4ZTUtNTk3NS00ZTQ3LWEzN2YtOGM5MWVjYjBjYTdh",
     "@type": "Offer",
     "assigner": "provider",
     "target": "resistance_value"

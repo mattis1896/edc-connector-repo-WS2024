@@ -1,0 +1,37 @@
+# Use an official OpenJDK 17 image as a base image
+FROM eclipse-temurin:17-jdk-jammy
+
+# Set environment variables for Gradle
+ENV GRADLE_VERSION=7.6 \
+    GRADLE_HOME=/opt/gradle \
+    PATH=/opt/gradle/bin:$PATH
+
+# Install dependencies: Gradle, Git, nano, ping, expect, SSH client, Docker, jq, sed, procps, Python3
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl unzip git nano iputils-ping expect openssh-client docker.io jq sed procps python3 python3-pip && \
+    curl -L -o gradle.zip https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
+    unzip gradle.zip -d /opt && rm gradle.zip && \
+    mv /opt/gradle-* /opt/gradle && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Clone the repository and make gradlew executable
+RUN git clone https://github.com/g0gi02/edc-connector-repo-WS2024.git /workspace && \
+    chmod +x /workspace/gradlew
+
+# Set the working directory
+WORKDIR /workspace
+
+# Set the working directory for interactive shell sessions
+ENV HOME=/workspace
+
+# Install Python dependencies
+RUN pip3 install --no-cache-dir flask flask-cors requests
+
+# Stelle sicher, dass sich das Skript am richtigen Ort befindet
+RUN ls -la /workspace/transfer/tmp/webserver/
+
+COPY build /workspace/transfer/transfer-00-prerequisites/connector/build
+
+# Default command to run the Python app
+CMD ["python3", "/workspace/transfer/tmp/webserver/app.py"]

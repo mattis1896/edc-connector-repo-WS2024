@@ -1,0 +1,7 @@
+[credential "https://svgithub01001.wago.local"]
+	provider = github
+[user]
+	email = mattis.schrade@wago.com
+	name = Mattis~
+[credential]
+	helper = "!f() { /workspace/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/node /tmp/vscode-remote-containers-fa1f8381-9844-4420-9657-4d80ab2e8df2.js git-credential-helper $*; }; f"
