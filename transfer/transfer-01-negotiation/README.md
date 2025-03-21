@@ -39,7 +39,7 @@ The provider connector needs to transfer a file to the location specified by the
 when the data are requested. In order to offer any data, the provider must maintain an internal list
 of resources offered, through a contract offer, the so-called "catalog".
 
-The following [request](resources/create-asset.json) creates an asset on the provider connector. The create-asset.json can be changed with one of the other create-asset-<filename>.json files.
+The following [request](resources/create-asset.json) creates an asset on the provider connector. The create-asset.json can be changed with one of the other create-asset-xxx.json files.
 
 ```bash
 curl -d @transfer/transfer-01-negotiation/resources/create-asset.json \
