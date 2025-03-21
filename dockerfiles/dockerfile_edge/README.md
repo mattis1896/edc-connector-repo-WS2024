@@ -5,7 +5,7 @@ This document explains how to build and run a Docker container that encapsulates
 ## Build Command
 
 ```bash
-docker build -t <username>/edc:pfc .
+docker build -t <username>/edc:edge .
 ```
 
 ## Run command
